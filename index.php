@@ -150,28 +150,9 @@
 		</div>
 		<div class="neighborhoods">
 			<h2>Neighborhoods</h2>
-			<ul id="menu-main-menu" class="menu"><li id="menu-item-1018" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1018"><a href="http://kangabell.com/pvd/tag/chalkstone/">Chalkstone</a></li>
-				<li id="menu-item-1019" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1019"><a href="http://kangabell.com/pvd/tag/charles/">Charles</a></li>
-				<li id="menu-item-1010" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1010"><a href="http://kangabell.com/pvd/tag/college-hill/">College Hill</a></li>
-				<li id="menu-item-1004" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1004"><a href="http://kangabell.com/pvd/tag/downtown/">Downtown</a></li>
-				<li id="menu-item-1005" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1005"><a href="http://kangabell.com/pvd/tag/elmhurst/">Elmhurst</a></li>
-				<li id="menu-item-1006" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1006"><a href="http://kangabell.com/pvd/tag/elmwood/">Elmwood</a></li>
-				<li id="menu-item-1007" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1007"><a href="http://kangabell.com/pvd/tag/federal-hill/">Federal Hill</a></li>
-				<li id="menu-item-1008" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1008"><a href="http://kangabell.com/pvd/tag/fox-point/">Fox Point</a></li>
-				<li id="menu-item-1009" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1009"><a href="http://kangabell.com/pvd/tag/jewelry-district/">Jewelry District</a></li>
-				<li id="menu-item-1000" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1000"><a href="http://kangabell.com/pvd/tag/lower-south-providence/">Lower South PVD</a></li>
-				<li id="menu-item-1001" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1001"><a href="http://kangabell.com/pvd/tag/mount-hope/">Mount Hope</a></li>
-				<li id="menu-item-1002" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1002"><a href="http://kangabell.com/pvd/tag/north-main/">North Main</a></li>
-				<li id="menu-item-1003" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1003"><a href="http://kangabell.com/pvd/tag/olneyville/">Olneyville</a></li>
-				<li id="menu-item-1011" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1011"><a href="http://kangabell.com/pvd/tag/silver-lake/">Silver Lake</a></li>
-				<li id="menu-item-997" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-997"><a href="http://kangabell.com/pvd/tag/smith-hill">Smith Hill</a></li>
-				<li id="menu-item-1012" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1012"><a href="http://kangabell.com/pvd/tag/south-elmwood/">South Elmwood</a></li>
-				<li id="menu-item-1013" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1013"><a href="http://kangabell.com/pvd/tag/upper-south-providence/">Upper South PVD</a></li>
-				<li id="menu-item-1015" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1015"><a href="http://kangabell.com/pvd/tag/valley/">Valley</a></li>
-				<li id="menu-item-1014" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1014"><a href="http://kangabell.com/pvd/tag/washington-park/">Washington Park</a></li>
-				<li id="menu-item-1016" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1016"><a href="http://kangabell.com/pvd/tag/west-broadway/">West Broadway</a></li>
-				<li id="menu-item-1017" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1017"><a href="http://kangabell.com/pvd/tag/west-end/">West End</a></li>
-			</ul>
+			<?php
+			wp_nav_menu( array( 'theme_location' => 'home-menu' ) );
+			?>
 		</div>
 		<div class="tags">
 			<h2>Tags</h2>
