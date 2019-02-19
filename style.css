@@ -72,6 +72,7 @@ img { /* image fills grid cell */
 }
 
 .supplement {
+  grid-column: 1;
   grid-row: 6 / span 2;
 }
 
@@ -92,4 +93,5 @@ img { /* image fills grid cell */
 
 .tags {
   grid-column: 1;
+  grid-row: 8 / span 7;
 }
