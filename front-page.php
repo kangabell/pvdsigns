@@ -59,6 +59,5 @@ Template Name: Front Page
 			?>
 			</ul>
 		</div>
-	</main>
-</body>
-</html>
+
+<?php get_footer(); ?>

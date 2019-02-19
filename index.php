@@ -6,6 +6,4 @@
 
 		<?php endwhile; endif; ?>
 		  
-	</main>
-</body>
-</html>
+<?php get_footer(); ?>
