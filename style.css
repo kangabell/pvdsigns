@@ -11,30 +11,12 @@ Text Domain: pvdsigns
 
 ******************************************************************************************************************/
 
-@font-face {
-    font-family: 'BLOKK';
-    src: url('BLOKK/BLOKKNeue-Regular.eot');
-    src: url('BLOKK/BLOKKNeue-Regular.eot?#iefix') format('embedded-opentype'),
-         url('BLOKK/BLOKKNeue-Regular.woff2') format('woff2'),
-         url('BLOKK/BLOKKNeue-Regular.woff') format('woff'),
-         url('BLOKK/BLOKKNeue-Regular.otf') format('opentype'),
-         url('BLOKK/BLOKKNeue-Regular.ttf') format('truetype'),
-         url('BLOKK/BLOKKNeue-Regular.svg#BLOKKRegular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
 body {
   font-family: helvetica;
 }
 
 * {
   box-sizing: border-box;
-}
-
-p,
-li {
-  font-family: "BLOKK";
 }
 
 a {
