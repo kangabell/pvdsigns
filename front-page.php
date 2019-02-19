@@ -10,12 +10,16 @@ Template Name: Front Page
 	<img src="https://place-hold.it/500x350&text=featured">
 </div>
 <div class="featured">
-	<img src="https://place-hold.it/120x80&text=featured">
-	<img src="https://place-hold.it/120x80&text=featured">
-	<img src="https://place-hold.it/120x80&text=featured">
-	<img src="https://place-hold.it/120x80&text=featured">
-	<img src="https://place-hold.it/120x80&text=featured">
-	<img src="https://place-hold.it/120x80&text=featured">
+	<?php
+	if ( have_rows('featured_items') ): while ( have_rows('featured_items') ) : the_row();
+    $post = get_sub_field('item');
+    setup_postdata($post);
+    ?>
+		<a class="thumbnail" href="<?php echo get_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
+    <?php
+    wp_reset_postdata();
+	endwhile; endif;
+	?>
 </div>
 <div class="about">
 	<h2>About</h2>
