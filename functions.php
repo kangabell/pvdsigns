@@ -25,6 +25,18 @@ if ( ! function_exists( 'pvdsigns_setup' ) ) :
 		 */
 		add_theme_support( 'post-thumbnails' );
 
+		/**
+		 * Add support for core custom logo.
+		 *
+		 * @link https://codex.wordpress.org/Theme_Logo
+		 */
+		add_theme_support( 'custom-logo', array(
+			'height'      => 250,
+			'width'       => 550,
+			'flex-width'  => true,
+			'flex-height' => true
+		) );
+
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'home-menu' => esc_html__( 'Front Page', 'pvdsigns' ),

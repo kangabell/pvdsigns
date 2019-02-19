@@ -39,7 +39,17 @@ header {
   align-items: center;
   display: flex;
   flex-wrap: wrap;
+  height: 5rem;
   justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.logo > * {
+  margin: 0;
+}
+
+.logo img {
+  width: 16rem;
 }
 
 main {
