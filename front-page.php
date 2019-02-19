@@ -4,16 +4,8 @@ Template Name: Front Page
 */
 ?>
 
-<!DOCTYPE html>
-<html <?php language_attributes(); ?>>
-<head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="profile" href="https://gmpg.org/xfn/11">
-	<?php wp_head(); ?>
-</head>
-<body>
-	<main>
+<?php get_header(); ?>
+
 		<div class="img-featured">
 			<img src="https://place-hold.it/500x350&text=featured">
 		</div>
