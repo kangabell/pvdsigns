@@ -67,10 +67,6 @@ img { /* image fills grid cell */
   flex-wrap: wrap;
 }
 
-.img-featured {
-  grid-row: span 3;
-}
-
 .featured {
   grid-column: 2;
   grid-row: span 4;
@@ -78,7 +74,7 @@ img { /* image fills grid cell */
   flex-wrap: wrap;
 }
 
-.featured img {
+.featured .thumbnail {
   margin: 1rem;
   width: 42%;
   height: 20%;
@@ -102,7 +98,7 @@ img { /* image fills grid cell */
   grid-row: 7 / span 6;
 }
 
-.thumbnail {
+.recent .thumbnail {
   flex: 25%;
   padding: 0.5rem;
 }

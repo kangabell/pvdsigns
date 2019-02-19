@@ -6,9 +6,6 @@ Template Name: Front Page
 
 <?php get_header(); ?>
 
-<div class="img-featured">
-	<img src="https://place-hold.it/500x350&text=featured">
-</div>
 <div class="featured">
 	<?php
 	if ( have_rows('featured_items') ): while ( have_rows('featured_items') ) : the_row();
