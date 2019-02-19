@@ -7,4 +7,8 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+	<header>
+		<h1>PVD Signs</h1>
+		<?php echo get_search_form(); ?>
+	</header>
 	<main>
