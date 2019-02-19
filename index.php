@@ -95,7 +95,7 @@
 			grid-row: 7 / span 6;
 		}
 
-		.recent img {
+		.thumbnail {
 			padding: 0.5rem;
 			width: 25%;
 		}
@@ -139,22 +139,13 @@
 		<div class="recent">
 			<h2>Recently Updated</h2>
 			<div class="flex">
-				<img src="https://place-hold.it/200x150&text=image">
-				<img src="https://place-hold.it/200x150&text=image">
-				<img src="https://place-hold.it/200x150&text=image">
-				<img src="https://place-hold.it/200x150&text=image">
-				<img src="https://place-hold.it/200x150&text=image">
-				<img src="https://place-hold.it/200x150&text=image">
-				<img src="https://place-hold.it/200x150&text=image">
-				<img src="https://place-hold.it/200x150&text=image">
-				<img src="https://place-hold.it/200x150&text=image">
-				<img src="https://place-hold.it/200x150&text=image">
-				<img src="https://place-hold.it/200x150&text=image">
-				<img src="https://place-hold.it/200x150&text=image">
-				<img src="https://place-hold.it/200x150&text=image">
-				<img src="https://place-hold.it/200x150&text=image">
-				<img src="https://place-hold.it/200x150&text=image">
-				<img src="https://place-hold.it/200x150&text=image">
+				<?php
+				if ( have_posts() ) : while ( have_posts() ) : the_post();
+				?>
+					<a class="thumbnail" href="<?php the_post_thumbnail_url(); ?>"><?php the_post_thumbnail(); ?></a>
+				<?php
+				endwhile; endif;
+				?>
 			</div>
 		</div>
 		<div class="neighborhoods">
