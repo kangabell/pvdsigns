@@ -34,11 +34,17 @@ Template Name: Front Page
 	<h2>Recently Updated</h2>
 	<div class="flex">
 		<?php
-		if ( have_posts() ) : while ( have_posts() ) : the_post();
+		$args = array(
+			'posts_per_page' => 16,
+			'ignore_sticky_posts' => true
+		);
+		query_posts ($args);
+		if (have_posts()) : while (have_posts()) : the_post();
 		?>
-			<a class="thumbnail" href="<?php the_post_thumbnail_url(); ?>"><?php the_post_thumbnail(); ?></a>
-		<?php
+		    <a class="thumbnail" href="<?php echo get_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
+	    <?php
 		endwhile; endif;
+		wp_reset_query();
 		?>
 	</div>
 </div>
