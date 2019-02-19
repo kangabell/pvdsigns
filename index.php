@@ -176,19 +176,13 @@
 		<div class="tags">
 			<h2>Tags</h2>
 			<ul>
-				<li><a href="#">Aliquam</a></li>
-				<li><a href="#">feugiat</a></li>
-				<li><a href="#">neque</a></li>
-				<li><a href="#">in fermentum</a></li>
-				<li><a href="#">venenatis</a></li>
-				<li><a href="#">Nunc</a></li> 
-				<li><a href="#">vestibulum</a></li> 
-				<li><a href="#">nec</a></li> 
-				<li><a href="#">diam sit</a></li> 
-				<li><a href="#">amet</a></li> 
-				<li><a href="#">Aliquam</a></li>
-				<li><a href="#">feugiat</a></li>
-				<li><a href="#">posuere</a></li>
+			<?php
+			$tags = get_tags();
+			foreach ($tags as $tag) {
+				$tag_link = get_tag_link( $tag->term_id );
+				echo '<li><a href="' . $tag_link . '">' . $tag->name . '</a></li>';
+			}
+			?>
 			</ul>
 		</div>
 	</main>
