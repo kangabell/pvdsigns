@@ -14,11 +14,10 @@
 			if ( has_custom_logo() ) {
 				the_custom_logo();
 			} else {
-				bloginfo();
+				echo get_bloginfo() . ': ' . get_bloginfo('description');
 			}
 			?>
 			</h1>
-			<p><?php bloginfo('description'); ?></p>
 		</div>
 		<?php echo get_search_form(); ?>
 	</header>
