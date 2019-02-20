@@ -63,11 +63,21 @@ main {
 img {
   height: auto;
   max-width: 100%;
+  object-fit: cover; /* warning: not supported by ie */
+}
+
+.widget_media_image img,
+.featured-large img {
+  max-height: 100%;
 }
 
 .thumbnail {
   height: 8rem;
   overflow: hidden;
+}
+
+.thumbnail img {
+  height: 100%;
 }
 
 .flex {
@@ -78,11 +88,6 @@ img {
 .featured-large {
   grid-column: 1;
   grid-row: 1 / span 3;
-}
-
-.featured-large img {
-  height: 100%;
-  object-fit: cover; /* warning: not supported by ie */
 }
 
 .featured-grid {
