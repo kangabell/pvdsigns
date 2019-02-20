@@ -51,20 +51,14 @@ Template Name: Front Page
 <div class="neighborhoods">
 	<h2>Neighborhoods</h2>
 	<?php
-	wp_nav_menu( array( 'theme_location' => 'home-menu' ) );
+	wp_nav_menu( array( 'theme_location' => 'home-menu-1' ) );
 	?>
 </div>
 <div class="tags">
 	<h2>Tags</h2>
-	<ul>
 	<?php
-	$tags = get_tags();
-	foreach ($tags as $tag) {
-		$tag_link = get_tag_link( $tag->term_id );
-		echo '<li><a href="' . $tag_link . '">' . $tag->name . '</a></li>';
-	}
+	wp_nav_menu( array( 'theme_location' => 'home-menu-2' ) );
 	?>
-	</ul>
 </div>
 
 <?php get_footer(); ?>

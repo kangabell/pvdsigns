@@ -39,7 +39,8 @@ if ( ! function_exists( 'pvdsigns_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'home-menu' => esc_html__( 'Front Page', 'pvdsigns' ),
+			'home-menu-1' => esc_html__( 'Front Page 1', 'pvdsigns' ),
+			'home-menu-2' => esc_html__( 'Front Page 2', 'pvdsigns' ),
 		) );
 
 		/**
