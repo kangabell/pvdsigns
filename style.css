@@ -60,9 +60,14 @@ main {
   grid-row-gap: 1rem;
 }
 
-img { /* image fills grid cell */
-  width: 100%;
-  height: 100%;
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+.thumbnail {
+  height: 8rem;
+  overflow: hidden;
 }
 
 .flex {
@@ -70,17 +75,27 @@ img { /* image fills grid cell */
   flex-wrap: wrap;
 }
 
-.featured {
+.featured-large {
+  grid-column: 1;
+  grid-row: 1 / span 3;
+}
+
+.featured-large img {
+  height: 100%;
+  object-fit: cover; /* warning: not supported by ie */
+}
+
+.featured-grid {
+  align-items: flex-start;
+  grid-row: 1 / span 3;
   grid-column: 2;
-  grid-row: span 4;
   display: flex;
   flex-wrap: wrap;
 }
 
-.featured .thumbnail {
-  margin: 1rem;
-  width: 42%;
-  height: 20%;
+.featured-grid .thumbnail {
+  flex: 50%;
+  padding: 0.5rem;
 }
 
 .home-widget-1 {

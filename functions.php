@@ -65,7 +65,7 @@ if ( ! function_exists( 'pvdsigns_setup' ) ) :
 			register_sidebar( array(
 				'name'          => esc_html__( 'Front Page Widget 1', 'pvdsigns' ),
 				'id'            => 'home-widget-1',
-				'before_widget' => '<div class="home-widget-1">',
+				'before_widget' => '<div class="home-widget-1 %2$s">',
 				'after_widget'  => '</div>',
 				'before_title'  => '<h2>',
 				'after_title'   => '</h2>',
@@ -73,7 +73,7 @@ if ( ! function_exists( 'pvdsigns_setup' ) ) :
 			register_sidebar( array(
 				'name'          => esc_html__( 'Front Page Widget 2', 'pvdsigns' ),
 				'id'            => 'home-widget-2',
-				'before_widget' => '<div class="home-widget-2">',
+				'before_widget' => '<div class="home-widget-2 %2$s">',
 				'after_widget'  => '</div>',
 				'before_title'  => '<h2>',
 				'after_title'   => '</h2>',
@@ -81,7 +81,7 @@ if ( ! function_exists( 'pvdsigns_setup' ) ) :
 			register_sidebar( array(
 				'name'          => esc_html__( 'Front Page Widget 3', 'pvdsigns' ),
 				'id'            => 'home-widget-3',
-				'before_widget' => '<div class="home-widget-3">',
+				'before_widget' => '<div class="home-widget-3 %2$s">',
 				'after_widget'  => '</div>',
 				'before_title'  => '<h2>',
 				'after_title'   => '</h2>',

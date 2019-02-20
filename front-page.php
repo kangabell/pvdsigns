@@ -3,6 +3,7 @@
 Template Name: Front Page
 */
 
+$featured_ids = get_field('featured_items', false, false);
 $locations = get_nav_menu_locations();
 $menu1_id = $locations[ 'home-menu-1' ] ;
 $menu1_object = wp_get_nav_menu_object( $menu1_id );
@@ -13,16 +14,38 @@ $menu2_object = wp_get_nav_menu_object( $menu2_id );
 
 <?php get_header(); ?>
 
-<div class="featured">
+<div class="featured-large">
+	<?php // first Featured Item
+	$args = array(
+		'posts_per_page' => 1,
+		'post__in' => $featured_ids,
+		'ignore_sticky_posts' => true
+	);
+	query_posts ($args);
+	if (have_posts()) : while (have_posts()) : the_post();
+	?>
+		<a href="<?php echo get_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
 	<?php
-	if ( have_rows('featured_items') ): while ( have_rows('featured_items') ) : the_row();
-    $post = get_sub_field('item');
-    setup_postdata($post);
-    ?>
-		<a class="thumbnail" href="<?php echo get_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
-    <?php
-    wp_reset_postdata();
 	endwhile; endif;
+	wp_reset_query();
+	?>
+</div>
+
+<div class="featured-grid">
+	<?php // 6 more Featured Items
+	$args = array(
+		'posts_per_page' => 6,
+		'post__in' => $featured_ids,
+		'ignore_sticky_posts' => true,
+		'offset' => 1
+	);
+	query_posts ($args);
+	if (have_posts()) : while (have_posts()) : the_post();
+	?>
+		<a class="thumbnail" href="<?php echo get_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
+	<?php
+	endwhile; endif;
+	wp_reset_query();
 	?>
 </div>
 <?php dynamic_sidebar( 'home-widget-1' ); ?>
