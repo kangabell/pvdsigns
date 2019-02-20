@@ -92,7 +92,7 @@ img { /* image fills grid cell */
   grid-row: 4 / span 2;
 }
 
-.supplement {
+.home-widget-3 {
   grid-column: 1;
   grid-row: 6 / span 2;
 }

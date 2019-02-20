@@ -78,6 +78,14 @@ if ( ! function_exists( 'pvdsigns_setup' ) ) :
 				'before_title'  => '<h2>',
 				'after_title'   => '</h2>',
 			) );
+			register_sidebar( array(
+				'name'          => esc_html__( 'Front Page Widget 3', 'pvdsigns' ),
+				'id'            => 'home-widget-3',
+				'before_widget' => '<div class="home-widget-3">',
+				'after_widget'  => '</div>',
+				'before_title'  => '<h2>',
+				'after_title'   => '</h2>',
+			) );
 		}
 		add_action( 'widgets_init', 'pvdsigns_widgets_init' );
 
