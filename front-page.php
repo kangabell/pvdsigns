@@ -19,6 +19,7 @@ $menu2_object = wp_get_nav_menu_object( $menu2_id );
 	$args = array(
 		'posts_per_page' => 1,
 		'post__in' => $featured_ids,
+        'orderby' => 'post__in',
 		'ignore_sticky_posts' => true
 	);
 	query_posts ($args);
@@ -34,6 +35,7 @@ $menu2_object = wp_get_nav_menu_object( $menu2_id );
 	$args = array(
 		'posts_per_page' => 6,
 		'post__in' => $featured_ids,
+        'orderby' => 'post__in',
 		'ignore_sticky_posts' => true,
 		'offset' => 1
 	);
