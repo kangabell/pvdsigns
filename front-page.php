@@ -2,6 +2,13 @@
 /*
 Template Name: Front Page
 */
+
+$locations = get_nav_menu_locations();
+$menu1_id = $locations[ 'home-menu-1' ] ;
+$menu1_object = wp_get_nav_menu_object( $menu1_id );
+$menu2_id = $locations[ 'home-menu-2' ] ;
+$menu2_object = wp_get_nav_menu_object( $menu2_id );
+
 ?>
 
 <?php get_header(); ?>
@@ -48,14 +55,14 @@ Template Name: Front Page
 		?>
 	</div>
 </div>
-<div class="neighborhoods">
-	<h2>Neighborhoods</h2>
+<div class="menu-1">
+	<h2><?php echo $menu1_object->name; ?></h2>
 	<?php
 	wp_nav_menu( array( 'theme_location' => 'home-menu-1' ) );
 	?>
 </div>
-<div class="tags">
-	<h2>Tags</h2>
+<div class="menu-2">
+	<h2><?php echo $menu2_object->name; ?></h2>
 	<?php
 	wp_nav_menu( array( 'theme_location' => 'home-menu-2' ) );
 	?>
