@@ -23,9 +23,7 @@ $menu2_object = wp_get_nav_menu_object( $menu2_id );
 	);
 	query_posts ($args);
 	if (have_posts()) : while (have_posts()) : the_post();
-	?>
-		<a href="<?php echo get_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
-	<?php
+		get_template_part('partials/tile');
 	endwhile; endif;
 	wp_reset_query();
 	?>
@@ -41,9 +39,7 @@ $menu2_object = wp_get_nav_menu_object( $menu2_id );
 	);
 	query_posts ($args);
 	if (have_posts()) : while (have_posts()) : the_post();
-	?>
-		<a class="thumbnail" href="<?php echo get_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
-	<?php
+		get_template_part('partials/tile');
 	endwhile; endif;
 	wp_reset_query();
 	?>
@@ -61,9 +57,7 @@ $menu2_object = wp_get_nav_menu_object( $menu2_id );
 		);
 		query_posts ($args);
 		if (have_posts()) : while (have_posts()) : the_post();
-		?>
-		    <a class="thumbnail" href="<?php echo get_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
-	    <?php
+		    get_template_part('partials/tile');
 		endwhile; endif;
 		wp_reset_query();
 		?>
