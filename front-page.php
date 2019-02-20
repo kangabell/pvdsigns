@@ -62,6 +62,7 @@ $menu2_object = wp_get_nav_menu_object( $menu2_id );
 		wp_reset_query();
 		?>
 	</div>
+	<a class="button" href="<?php echo get_post_type_archive_link('post'); ?>"><?php _e( 'Show All', 'pvdsigns' ); ?></a>
 </div>
 <div class="menu-1">
 	<h2><?php echo $menu1_object->name; ?></h2>
