@@ -25,6 +25,11 @@ if ( ! function_exists( 'pvdsigns_setup' ) ) :
 		 */
 		add_theme_support( 'post-thumbnails' );
 
+		/*
+		 * Add theme support for selective refresh for widgets.
+		 */
+		add_theme_support( 'customize-selective-refresh-widgets' );
+
 		/**
 		 * Add support for core custom logo.
 		 *
@@ -39,8 +44,8 @@ if ( ! function_exists( 'pvdsigns_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'home-menu-1' => esc_html__( 'Front Page 1', 'pvdsigns' ),
-			'home-menu-2' => esc_html__( 'Front Page 2', 'pvdsigns' ),
+			'home-menu-1' => esc_html__( 'Front Page Menu 1', 'pvdsigns' ),
+			'home-menu-2' => esc_html__( 'Front Page Menu 2', 'pvdsigns' ),
 		) );
 
 		/**
@@ -50,6 +55,31 @@ if ( ! function_exists( 'pvdsigns_setup' ) ) :
 			wp_enqueue_style( 'pvdsigns-style', get_template_directory_uri() . '/style.css' );
 		}
 		add_action( 'wp_enqueue_scripts', 'pvdsigns_scripts' );
+
+		/**
+		 * Register widget area.
+		 *
+		 * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
+		 */
+		function pvdsigns_widgets_init() {
+			register_sidebar( array(
+				'name'          => esc_html__( 'Front Page Widget 1', 'pvdsigns' ),
+				'id'            => 'home-widget-1',
+				'before_widget' => '<div class="home-widget-1">',
+				'after_widget'  => '</div>',
+				'before_title'  => '<h2>',
+				'after_title'   => '</h2>',
+			) );
+			register_sidebar( array(
+				'name'          => esc_html__( 'Front Page Widget 2', 'pvdsigns' ),
+				'id'            => 'home-widget-2',
+				'before_widget' => '<div class="home-widget-2">',
+				'after_widget'  => '</div>',
+				'before_title'  => '<h2>',
+				'after_title'   => '</h2>',
+			) );
+		}
+		add_action( 'widgets_init', 'pvdsigns_widgets_init' );
 
 	}
 

@@ -25,15 +25,8 @@ $menu2_object = wp_get_nav_menu_object( $menu2_id );
 	endwhile; endif;
 	?>
 </div>
-<div class="about">
-	<h2>About</h2>
-	<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla sed tellus metus. Aliquam feugiat neque in fermentum venenatis. Nunc vestibulum nec diam sit amet posuere. In posuere sem tortor, et auctor ante efficitur at.</p>
-</div>
-<div class="submit">
-	<h2>Submit a Photo</h2>
-	<p>Vivamus maximus tellus ut massa blandit, at ullamcorper augue pharetra. Quisque sit amet risus sit amet orci placerat egestas tempor at urna!</p>
-	<a href="#" class="button">Submit</a>
-</div>
+<?php dynamic_sidebar( 'home-widget-1' ); ?>
+<?php dynamic_sidebar( 'home-widget-2' ); ?>
 <div class="supplement">
 	<img src="https://place-hold.it/500x250&text=supplement">
 </div>
