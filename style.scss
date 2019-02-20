@@ -161,9 +161,14 @@ header {
 }
 
 
-/* ARCHIVE ***/
+/* ARCHIVES ***/
 
-.archive .thumbnail {
-  flex: 33%;
-  margin: $gutter / 2;
+.blog,
+.archive {
+
+  .thumbnail {
+    flex: 32%;
+    margin: $gutter / 2;
+  }
+
 }
