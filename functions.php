@@ -89,6 +89,41 @@ if ( ! function_exists( 'pvdsigns_setup' ) ) :
 		}
 		add_action( 'widgets_init', 'pvdsigns_widgets_init' );
 
+		/**
+		 * Register Neighborhood custom taxonomy.
+		 *
+		 * @link https://codex.wordpress.org/Function_Reference/register_taxonomy
+		 */
+		function pvdsigns_neighborhood_taxonomy() {
+
+			$labels = array(
+				'name' => _x( 'Neighborhoods', 'taxonomy general name' ),
+				'singular_name' => _x( 'Neighborhood', 'taxonomy singular name' ),
+				'search_items' =>  __( 'Search Neighborhoods' ),
+				'all_items' => __( 'All Neighborhoods' ),
+				'parent_item' => __( 'Parent Neighborhood' ),
+				'parent_item_colon' => __( 'Parent Neighborhood:' ),
+				'edit_item' => __( 'Edit Neighborhood' ),
+				'update_item' => __( 'Update Neighborhood' ),
+				'add_new_item' => __( 'Add New Neighborhood' ),
+				'new_item_name' => __( 'New Neighborhood Name' ),
+				'menu_name' => __( 'Neighborhoods' ),
+			);
+
+
+			register_taxonomy( 'neighborhoods', array('post'), array(
+				'hierarchical' => true,
+				'labels' => $labels,
+				'show_ui' => true,
+				'show_admin_column' => true,
+				'query_var' => true,
+				'rewrite' => array( 'slug' => 'neighborhood' )
+			));
+
+		}
+
+		add_action( 'init', 'pvdsigns_neighborhood_taxonomy', 0 );
+
 	}
 
 endif;
