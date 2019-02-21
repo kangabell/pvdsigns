@@ -112,8 +112,10 @@ a {
 
 .button {
   background: $white;
+  display: table;
   font-weight: normal;
   padding: 0.5rem 0.75rem;
+  text-align: center;
   text-transform: uppercase;
 
   &:hover,
@@ -150,7 +152,8 @@ ul {
 }
 
 header,
-main {
+main,
+footer {
   max-width: 1300px;
   margin: 0 auto;
 }
@@ -233,15 +236,16 @@ header {
 
 .featured-large {
   grid-column: 2;
-  grid-row: 3 / span 3;
+  grid-row: 1 / span 3;
+}
+
+.featured-medium {
+  grid-column: 2;
+  grid-row: 4 / span 2;
 }
 
 .featured-grid {
-  align-items: flex-start;
-  grid-row: 1 / span 3;
-  grid-column: 1;
-  display: flex;
-  flex-wrap: wrap;
+  display: none; //
 }
 
 .featured-grid .thumbnail {
@@ -249,10 +253,10 @@ header {
   padding: 0.5rem;
 }
 
-.home-widget-1 {
-  grid-column: 2;
-  grid-row: 1 / span 2;
-}
+// .home-widget-1 {
+//   grid-column: 1;
+//   grid-row: 7 / span 2;
+// }
 
 .home-widget-2 {
   display: none; //
@@ -267,9 +271,7 @@ header {
 
 .recent {
   grid-column: 1 / span 1;
-  grid-row: 5 / span 2;
-  margin-top: -($gutter * 2);
-  overflow: hidden; //
+  grid-row: 1 / span 2;
 }
 
 .recent .thumbnail {
@@ -308,6 +310,17 @@ header {
   }
 
 } // .menu-2
+
+.show-all {
+  grid-column: 3;
+  grid-row: 5;
+  place-self: end stretch;
+
+  .button {
+    width: 100%;
+  }
+
+}
 
 
 /* ARCHIVES ***/

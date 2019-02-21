@@ -30,6 +30,22 @@ $menu2_object = wp_get_nav_menu_object( $menu2_id );
 	?>
 </div>
 
+<div class="featured-medium">
+	<?php // second Featured Item
+	$args = array(
+		'posts_per_page' => 1,
+		'post__in' => $featured_ids,
+        'orderby' => 'post__in',
+		'ignore_sticky_posts' => true,
+		'offset' => 1
+	);
+	query_posts ($args);
+	if (have_posts()) : while (have_posts()) : the_post();
+		get_template_part('partials/tile');
+	endwhile; endif;
+	wp_reset_query();
+	?>
+</div>
 <div class="featured-grid">
 	<?php // 6 more Featured Items
 	$args = array(
@@ -46,15 +62,13 @@ $menu2_object = wp_get_nav_menu_object( $menu2_id );
 	wp_reset_query();
 	?>
 </div>
-<?php dynamic_sidebar( 'home-widget-1' ); ?>
 <?php dynamic_sidebar( 'home-widget-2' ); ?>
 <?php dynamic_sidebar( 'home-widget-3' ); ?>
 <div class="recent">
 	<div class="flex">
 		<?php
 		$args = array(
-			'posts_per_page' => 16,
-			'ignore_sticky_posts' => true
+			'posts_per_page' => 10
 		);
 		query_posts ($args);
 		if (have_posts()) : while (have_posts()) : the_post();
@@ -63,7 +77,6 @@ $menu2_object = wp_get_nav_menu_object( $menu2_id );
 		wp_reset_query();
 		?>
 	</div>
-	<a class="button" href="<?php echo get_post_type_archive_link('post'); ?>"><?php _e( 'Show All', 'pvdsigns' ); ?></a>
 </div>
 <div class="menu-1">
 	<h2><?php echo $menu1_object->name; ?></h2>
@@ -76,6 +89,9 @@ $menu2_object = wp_get_nav_menu_object( $menu2_id );
 	<?php
 	wp_nav_menu( array( 'theme_location' => 'home-menu-2' ) );
 	?>
+</div>
+<div class="show-all">
+	<a class="button" href="<?php echo get_post_type_archive_link('post'); ?>"><?php _e( 'Show All Posts', 'pvdsigns' ); ?></a>
 </div>
 
 <?php get_footer(); ?>
