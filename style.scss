@@ -16,8 +16,81 @@ Text Domain: pvdsigns
 
 $gutter: 1rem;
 
+$white: #fff;
+$offwhite: #f9fbf3;
+$lightgray: #cfd1c7;
+$gray: gray;
+$darkgray: #444;
+$black: #000;
+$blue: #2184B8;
+
+@font-face {
+    font-family:'Lingua Franca';
+    src: url('fonts/Lingua Franca Bold.woff2') format('woff2'),
+    url('fonts/Lingua Franca Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family:'Lingua Franca';
+    src: url('fonts/Lingua Franca Bold Italic.woff2') format('woff2'),
+    url('fonts/Lingua Franca Bold Italic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family:'Lingua Franca';
+    src: url('fonts/Lingua Franca Italic.woff2') format('woff2'),
+    url('fonts/Lingua Franca Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family:'Lingua Franca';
+    src: url('fonts/Lingua Franca Regular.woff2') format('woff2'),
+    url('fonts/Lingua Franca Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family:'Autor';
+    src: url('fonts/Autor Regular.woff2') format('woff2'),
+    url('fonts/Autor Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family:'Autor';
+    src: url('fonts/Autor Bold.woff2') format('woff2'),
+    url('fonts/Autor Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family:'Autor Black';
+    src: url('fonts/Autor Black.woff2') format('woff2'),
+    url('fonts/Autor Black.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+}
+
 body {
-  font-family: helvetica;
+  background: $offwhite;
+  font-family: Autor, Helvetica, sans-serif;
+  font-size: 16px;
 }
 
 * {
@@ -25,13 +98,55 @@ body {
 }
 
 a {
-  text-decoration: none;
+  color: $blue;
   font-weight: bold;
+  text-decoration: none;
+  transition: all 0.025s;
+
+  &:hover,
+  &:focus {
+    color: $darkgray;
+  }
+
 }
 
 .button {
-  border: 1px solid;
-  padding: 0.5rem;
+  background: $white;
+  font-weight: normal;
+  padding: 0.5rem 0.75rem;
+  text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    background: $blue;
+    color: $white;
+  }
+
+}
+
+a img,
+.button {
+  box-shadow: 1px 1px 8px rgba($black, 0.2);
+  border: 1px solid rgba($black, 0.2);
+  transition: all 0.125s;
+
+  &:hover,
+  &:focus {
+    border-color: rgba($black, 0.4);
+    box-shadow: 1px 1px 8px rgba($black, 0.4);
+  }
+
+}
+
+h2 {
+  color: $darkgray;
+  font-family: 'Lingua Franca', Times, serif;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+ul {
+  padding-left: 1em;
 }
 
 header,
@@ -57,6 +172,7 @@ img {
 
 .thumbnail img {
   height: 100%;
+  width: 100%;
 }
 
 .flex {
@@ -71,9 +187,16 @@ header {
   align-items: center;
   display: flex;
   flex-wrap: wrap;
-  height: 5rem;
+  height: 8rem;
   justify-content: space-between;
   margin-bottom: 1rem;
+}
+
+.logo {
+  color: $lightgray;
+  font-family: 'Autor Black', Autor, Helvetica, sans-serif;
+  font-size: 3.25rem;
+  text-transform: uppercase;
 }
 
 .logo > * {

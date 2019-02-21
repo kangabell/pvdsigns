@@ -9,15 +9,7 @@
 <body <?php body_class(); ?>>
 	<header>
 		<div class="logo">
-			<h1>
-			<?php
-			if ( has_custom_logo() ) {
-				the_custom_logo();
-			} else {
-				echo get_bloginfo() . ': ' . get_bloginfo('description');
-			}
-			?>
-			</h1>
+			<h1><?php bloginfo(); ?></h1>
 		</div>
 		<?php echo get_search_form(); ?>
 	</header>
