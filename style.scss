@@ -244,31 +244,6 @@ header {
   grid-row: 4 / span 2;
 }
 
-.featured-grid {
-  display: none; //
-}
-
-.featured-grid .thumbnail {
-  flex: 50%;
-  padding: 0.5rem;
-}
-
-// .home-widget-1 {
-//   grid-column: 1;
-//   grid-row: 7 / span 2;
-// }
-
-.home-widget-2 {
-  display: none; //
-  grid-row: 4 / span 2;
-}
-
-.home-widget-3 {
-  display: none; //
-  grid-column: 1;
-  grid-row: 6 / span 2;
-}
-
 .recent {
   grid-column: 1 / span 1;
   grid-row: 1 / span 2;

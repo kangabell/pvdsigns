@@ -46,24 +46,6 @@ $menu2_object = wp_get_nav_menu_object( $menu2_id );
 	wp_reset_query();
 	?>
 </div>
-<div class="featured-grid">
-	<?php // 6 more Featured Items
-	$args = array(
-		'posts_per_page' => 6,
-		'post__in' => $featured_ids,
-        'orderby' => 'post__in',
-		'ignore_sticky_posts' => true,
-		'offset' => 1
-	);
-	query_posts ($args);
-	if (have_posts()) : while (have_posts()) : the_post();
-		get_template_part('partials/tile');
-	endwhile; endif;
-	wp_reset_query();
-	?>
-</div>
-<?php dynamic_sidebar( 'home-widget-2' ); ?>
-<?php dynamic_sidebar( 'home-widget-3' ); ?>
 <div class="recent">
 	<div class="flex">
 		<?php

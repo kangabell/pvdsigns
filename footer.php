@@ -1,7 +1,7 @@
 	</main>
 
 	<footer>
-		<?php dynamic_sidebar( 'home-widget-1' ); ?>
+		<?php dynamic_sidebar( 'footer-widget' ); ?>
 	</footer>
 
 	<?php wp_footer(); ?>
