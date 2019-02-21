@@ -50,7 +50,6 @@ $menu2_object = wp_get_nav_menu_object( $menu2_id );
 <?php dynamic_sidebar( 'home-widget-2' ); ?>
 <?php dynamic_sidebar( 'home-widget-3' ); ?>
 <div class="recent">
-	<h2>Recently Updated</h2>
 	<div class="flex">
 		<?php
 		$args = array(
