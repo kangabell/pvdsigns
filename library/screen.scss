@@ -1,4 +1,6 @@
 
+@import 'fonts';
+
 /* GLOBAL ***/
 
 $gutter: 1rem;
@@ -11,72 +13,9 @@ $darkgray: #444;
 $black: #000;
 $blue: #2184B8;
 
-@font-face {
-    font-family:'Lingua Franca';
-    src: url('fonts/Lingua Franca Bold.woff2') format('woff2'),
-    url('fonts/Lingua Franca Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-    font-stretch: normal;
-}
-
-@font-face {
-    font-family:'Lingua Franca';
-    src: url('fonts/Lingua Franca Bold Italic.woff2') format('woff2'),
-    url('fonts/Lingua Franca Bold Italic.woff') format('woff');
-    font-weight: bold;
-    font-style: italic;
-    font-stretch: normal;
-}
-
-@font-face {
-    font-family:'Lingua Franca';
-    src: url('fonts/Lingua Franca Italic.woff2') format('woff2'),
-    url('fonts/Lingua Franca Italic.woff') format('woff');
-    font-weight: normal;
-    font-style: italic;
-    font-stretch: normal;
-}
-
-@font-face {
-    font-family:'Lingua Franca';
-    src: url('fonts/Lingua Franca Regular.woff2') format('woff2'),
-    url('fonts/Lingua Franca Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-}
-
-@font-face {
-    font-family:'Autor';
-    src: url('fonts/Autor Regular.woff2') format('woff2'),
-    url('fonts/Autor Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-}
-
-@font-face {
-    font-family:'Autor';
-    src: url('fonts/Autor Bold.woff2') format('woff2'),
-    url('fonts/Autor Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-    font-stretch: normal;
-}
-
-@font-face {
-    font-family:'Autor Black';
-    src: url('fonts/Autor Black.woff2') format('woff2'),
-    url('fonts/Autor Black.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-    font-stretch: normal;
-}
-
 body {
   background: $offwhite;
-  font-family: Autor, Helvetica, sans-serif;
+  font-family: $sans-serif;
   font-size: 16px;
 }
 
@@ -122,7 +61,7 @@ a img,
 
 h2 {
   color: $darkgray;
-  font-family: 'Lingua Franca', Times, serif;
+  font-family: $serif;
   font-size: 1.5rem;
   margin: 0;
 }
@@ -177,7 +116,7 @@ header {
 
 .logo {
   color: $lightgray;
-  font-family: 'Autor Black', Autor, Helvetica, sans-serif;
+  font-family: 'Autor Black', $sans-serif;
   font-size: 3.25rem;
   text-transform: uppercase;
 

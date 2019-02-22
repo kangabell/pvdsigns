@@ -1,0 +1,65 @@
+@font-face {
+  font-family:'Lingua Franca';
+  src: url('fonts/Lingua Franca Bold.woff2') format('woff2'),
+  url('fonts/Lingua Franca Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family:'Lingua Franca';
+  src: url('fonts/Lingua Franca Bold Italic.woff2') format('woff2'),
+  url('fonts/Lingua Franca Bold Italic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family:'Lingua Franca';
+  src: url('fonts/Lingua Franca Italic.woff2') format('woff2'),
+  url('fonts/Lingua Franca Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family:'Lingua Franca';
+  src: url('fonts/Lingua Franca Regular.woff2') format('woff2'),
+  url('fonts/Lingua Franca Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family:'Autor';
+  src: url('fonts/Autor Regular.woff2') format('woff2'),
+  url('fonts/Autor Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family:'Autor';
+  src: url('fonts/Autor Bold.woff2') format('woff2'),
+  url('fonts/Autor Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family:'Autor Black';
+  src: url('fonts/Autor Black.woff2') format('woff2'),
+  url('fonts/Autor Black.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+$serif: 'Lingua Franca', Times, serif;
+$sans-serif: Autor, Helvetica, sans-serif;
