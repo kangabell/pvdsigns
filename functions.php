@@ -52,7 +52,7 @@ if ( ! function_exists( 'pvdsigns_setup' ) ) :
 		 * Enqueue scripts and styles.
 		 */
 		function pvdsigns_scripts() {
-			wp_enqueue_style( 'pvdsigns-style', get_template_directory_uri() . '/style.css' );
+			wp_enqueue_style( 'pvdsigns-style', get_template_directory_uri() . '/library/screen.css' );
 		}
 		add_action( 'wp_enqueue_scripts', 'pvdsigns_scripts' );
 
