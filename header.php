@@ -8,9 +8,11 @@
 </head>
 <body <?php body_class(); ?>>
 	<header>
-		<div class="logo">
-			<h1><?php bloginfo(); ?></h1>
+		<div class="wrap">
+			<div class="logo">
+				<h1><a href="<?php echo get_home_url(); ?>"><?php bloginfo(); ?></a></h1>
+			</div>
+			<?php echo get_search_form(); ?>
 		</div>
-		<?php echo get_search_form(); ?>
 	</header>
 	<main>

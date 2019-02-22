@@ -23,6 +23,23 @@ $border: 1px solid rgba($black, 0.2);
   justify-content: space-around;
 }
 
+%wrap {
+  max-width: 1300px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.screen-reader-text {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
 body {
   background: $offwhite;
   font-family: $sans-serif;
@@ -37,7 +54,7 @@ a {
   color: $blue;
   font-weight: bold;
   text-decoration: none;
-  transition: all 0.025s;
+  transition: all 0.075s;
 
   &:hover,
   &:focus {
@@ -52,29 +69,39 @@ a {
   padding: 0.5rem 0.75rem;
   text-align: center;
   text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    border-color: rgba($black, 0.4);
+  }
+
 }
 
-.button {
+.button,
+button,
+input[type='submit'] {
   @extend %label;
   background: $white;
-  display: table;
+}
+
+input[type='submit'] {
+  cursor: pointer;
 }
 
 a img,
 .button {
   box-shadow: 1px 1px 8px rgba($black, 0.2);
   transition: all 0.125s;
-
-  &:hover,
-  &:focus {
-    border-color: rgba($black, 0.4);
-    box-shadow: 1px 1px 8px rgba($black, 0.4);
-  }
-
 }
 
 a img {
   border: $border;
+
+  &:hover,
+  &:focus {
+    border-color: rgba($black, 0.4);
+  }
+
 }
 
 h2 {
@@ -88,11 +115,10 @@ ul {
   padding-left: 1em;
 }
 
-header,
+.wrap,
 main,
 footer {
-  max-width: 1300px;
-  margin: 0 auto;
+  @extend %wrap;
 }
 
 main {
@@ -123,22 +149,48 @@ img {
 /* HEADER ***/
 
 header {
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  height: 8rem;
-  justify-content: space-between;
-  margin-bottom: 1rem;
+  background: $white;
+
+  .wrap {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    height: 8rem;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+
 }
 
 .logo {
-  color: $lightgray;
   font-family: 'Autor Black', $sans-serif;
   font-size: 3.25rem;
   text-transform: uppercase;
 
-  > * {
+  h1 {
     margin: 0;
+  }
+
+  a {
+    color: $lightgray;
+
+    &:hover,
+    &:focus {
+      color: $darkgray;
+    }
+
+  }
+
+} // .logo
+
+.searchform {
+
+  div {
+    display: flex;
+  }
+
+  input {
+    margin-left: $gutter / 2;
   }
 
 }
@@ -226,7 +278,7 @@ header {
   place-self: end stretch;
 
   .button {
-    width: 100%;
+    display: block;
   }
 
 }
