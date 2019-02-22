@@ -172,11 +172,12 @@ img {
 
 .thumbnail {
   overflow: hidden;
-}
 
-.thumbnail img {
-  height: 100%;
-  width: 100%;
+  img {
+    height: 100%;
+    width: 100%;
+  }
+
 }
 
 .flex {
@@ -204,14 +205,11 @@ header {
   font-family: 'Autor Black', Autor, Helvetica, sans-serif;
   font-size: 3.25rem;
   text-transform: uppercase;
-}
 
-.logo > * {
-  margin: 0;
-}
+  > * {
+    margin: 0;
+  }
 
-.logo img {
-  width: 16rem;
 }
 
 
@@ -251,11 +249,12 @@ header {
 .recent {
   grid-column: 1 / span 1;
   grid-row: 1 / span 6;
-}
 
-.recent .thumbnail {
-  height: calc(20% - #{$gutter});
-  width: calc(50% - #{$gutter});
+  .thumbnail {
+    height: calc(20% - #{$gutter});
+    width: calc(50% - #{$gutter});
+  }
+
 }
 
 .neighborhoods {
