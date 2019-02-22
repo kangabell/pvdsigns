@@ -117,13 +117,6 @@ a {
   padding: 0.5rem 0.75rem;
   text-align: center;
   text-transform: uppercase;
-
-  &:hover,
-  &:focus {
-    background: $blue;
-    color: $white;
-  }
-
 }
 
 a img,
@@ -170,14 +163,9 @@ img {
   object-fit: cover; /* warning: not supported by ie */
 }
 
-.thumbnail {
-  overflow: hidden;
-
-  img {
-    height: 100%;
-    width: 100%;
-  }
-
+.thumbnail img {
+  height: 100%;
+  width: 100%;
 }
 
 .flex {
