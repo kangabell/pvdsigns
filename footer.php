@@ -1,7 +1,10 @@
+		</div> <!-- .wrap -->
 	</main>
 
 	<footer>
-		<?php dynamic_sidebar( 'footer-widget' ); ?>
+		<div class="wrap">
+			<?php dynamic_sidebar( 'footer-widget' ); ?>
+		</div>
 	</footer>
 
 	<?php wp_footer(); ?>
