@@ -18,7 +18,7 @@ $blue: #2184B8;
   display: flex;
   flex-wrap: wrap;
   height: 100%;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 body {
@@ -102,6 +102,11 @@ img {
 
 .flex {
   @extend %flexy;
+  justify-content: space-between;
+}
+
+.page-title {
+  width: 100%;
 }
 
 
@@ -220,7 +225,8 @@ header {
 /* ARCHIVES ***/
 
 .blog,
-.archive {
+.archive,
+.search-results {
 
   main {
     @extend %flexy;
