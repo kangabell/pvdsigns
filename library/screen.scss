@@ -229,20 +229,41 @@ footer {
 
   main .wrap {
     display: grid;
-    grid-column-gap: $gutter * 2;
-    grid-row-gap: $gutter * 2;
-    grid-template-columns: minmax(50%, 38rem) 1fr;
+    grid-column-gap: $gutter;
+    grid-row-gap: $gutter;
     grid-auto-rows: 5rem;
+    grid-template-columns: 100%;
     grid-template-areas:
-      "main-top column"
-      "main-top column"
-      "main-top column"
-      "main-bottom column"
-      "main-bottom column"
-      "bottom bottom"
-      "grid grid"
-      "grid grid"
-      "grid grid";
+      "main-top"
+      "main-top"
+      "grid"
+      "grid"
+      "grid"
+      "main-bottom"
+      "main-bottom"
+      "column"
+      "column"
+      "column"
+      "column"
+      "column"
+      "bottom"
+      "bottom";
+
+    @media only screen and (min-width: 30rem) {
+      grid-column-gap: $gutter * 2;
+      grid-row-gap: $gutter * 2;
+      grid-template-columns: minmax(50%, 38rem) 1fr;
+      grid-template-areas:
+        "main-top column"
+        "main-top column"
+        "main-top column"
+        "main-bottom column"
+        "main-bottom column"
+        "bottom bottom"
+        "grid grid"
+        "grid grid"
+        "grid grid";
+    }
 
     @media only screen and (min-width: 60rem) {
       grid-template-columns: 1fr 1fr;
@@ -275,13 +296,26 @@ footer {
   grid-area: grid;
 
   .thumbnail {
-    height: calc(33% - #{$gutter}); //
-    width: calc(25% - #{$gutter}); //
+    height: calc(25% - #{$gutter / 2});
+    width: calc(33% - #{$gutter / 2});
+
+    @media only screen and (min-width: 30rem) {
+      height: calc(33% - #{$gutter});
+      width: calc(25% - #{$gutter});
+    }
+
     @media only screen and (min-width: 60rem) {
       height: calc(20% - #{$gutter});
       width: calc(50% - #{$gutter});
+
+      // don't display last two (don't fit)
+      &:nth-last-of-type(1),
+      &:nth-last-of-type(2) {
+        display: none;
+      }
     }
-  }
+
+  } // .recent .thumbnail
 
 } // .recent
 

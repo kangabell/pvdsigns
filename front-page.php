@@ -50,7 +50,7 @@ $menu2_object = wp_get_nav_menu_object( $menu2_id );
 	<div class="flex">
 		<?php
 		$args = array(
-			'posts_per_page' => 10
+			'posts_per_page' => 12
 		);
 		query_posts ($args);
 		if (have_posts()) : while (have_posts()) : the_post();
