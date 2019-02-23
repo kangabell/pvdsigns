@@ -15,6 +15,8 @@ $blue: #2184B8;
 
 $border: 1px solid rgba($black, 0.2);
 
+$fontsmall: 0.85rem;
+
 %flexy {
   align-content: space-between;
   display: flex;
@@ -105,11 +107,15 @@ a img {
 
 }
 
+h1,
+h2 {
+  margin: 0;
+}
+
 h2 {
   color: $darkgray;
   font-family: $serif;
   font-size: 1.5em;
-  margin: 0;
 }
 
 ul {
@@ -142,6 +148,10 @@ img {
   justify-content: space-between;
 }
 
+.page-header {
+  margin-bottom: $gutter * 2;
+}
+
 .page-title {
   width: 100%;
 }
@@ -149,7 +159,7 @@ img {
 
 /* HEADER ***/
 
-header {
+.site-header {
   background: $white;
 
   .wrap {
@@ -201,8 +211,8 @@ header {
 
 /* FOOTER ***/
 
-footer {
-  font-size: 0.85rem;
+.site-footer {
+  font-size: $fontsmall;
   padding-top: $gutter * 2;
   padding-bottom: $gutter * 2;
 
@@ -216,7 +226,7 @@ footer {
 
   }
 
-} // footer
+} // .site-footer
 
 
 /* HOMEPAGE ***/
@@ -357,6 +367,11 @@ footer {
 
 
 /* SINGLE ***/
+
+.meta {
+  font-size: $fontsmall;
+  margin-top: 0.5em;
+}
 
 .single img {
   max-width: 1000px;

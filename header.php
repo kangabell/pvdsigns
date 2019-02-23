@@ -7,7 +7,7 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-	<header>
+	<header class="site-header">
 		<div class="wrap">
 			<div class="logo">
 				<h1><a href="<?php echo get_home_url(); ?>"><?php bloginfo(); ?></a></h1>
