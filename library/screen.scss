@@ -1,49 +1,9 @@
 @import 'normalize';
 @import 'fonts';
+@import 'utilities';
+
 
 /* GLOBAL ***/
-
-$gutter: 1rem;
-
-$white: #fff;
-$offwhite: #f9fbf3;
-$lightgray: #cfd1c7;
-$gray: gray;
-$darkgray: #444;
-$black: #000;
-$blue: #2184B8;
-
-$border: 1px solid rgba($black, 0.2);
-$shadow: 1px 1px 8px rgba($black, 0.2);
-$transition: all 0.125s;
-
-$fontsmall: 0.85rem;
-
-%flexy {
-  align-content: space-between;
-  display: flex;
-  flex-wrap: wrap;
-  height: 100%;
-  justify-content: space-between;
-}
-
-%wrap {
-  max-width: 1300px;
-  margin: 0 auto;
-  padding: $gutter;
-  width: 100%;
-}
-
-.screen-reader-text {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
 
 html {
   font-size: 18px;
@@ -71,31 +31,6 @@ a {
 
 }
 
-%label {
-  border: $border;
-  font-size: $fontsmall;
-  font-weight: normal;
-  padding: 0.5rem 0.75rem;
-  text-align: center;
-  text-transform: uppercase;
-
-  &:hover,
-  &:focus {
-    border-color: rgba($black, 0.4);
-  }
-
-}
-
-@mixin button($shadow:null) {
-  @extend %label;
-  background: $white;
-
-  @if ($shadow) {
-    box-shadow: $shadow;
-    transition: $transition;
-  }
-}
-
 button,
 .button {
   @include button($shadow);
@@ -103,14 +38,7 @@ button,
 
 input[type='submit'] {
   @include button;
-}
-
-input[type='submit'] {
   cursor: pointer;
-}
-
-a img,
-.button {
 }
 
 a img {
