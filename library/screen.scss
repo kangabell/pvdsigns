@@ -43,10 +43,13 @@ $fontsmall: 0.85rem;
   width: 1px;
 }
 
+html {
+  font-size: 18px;
+}
+
 body {
   background: $lightgray;
   font-family: $sans-serif;
-  font-size: 16px;
 }
 
 * {
@@ -68,6 +71,7 @@ a {
 
 %label {
   border: $border;
+  font-size: $fontsmall;
   font-weight: normal;
   padding: 0.5rem 0.75rem;
   text-align: center;
@@ -368,8 +372,12 @@ img {
 
 /* SINGLE ***/
 
-.meta {
+meta,
+.wp-block-image figcaption {
   font-size: $fontsmall;
+}
+
+.meta {
   margin-top: 0.5em;
 }
 
