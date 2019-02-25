@@ -6,5 +6,5 @@ endwhile;
 ?>
 </div>
 <div class="pagination">
-	<?php posts_nav_link(' ','&#8592; Older Posts', 'Newer Posts &#8594;'); ?>
+	<?php posts_nav_link(' ','&#8592; Newer Posts', 'Older Posts &#8594;'); ?>
 </div>
