@@ -56,12 +56,22 @@ $fontsmall: 0.85rem;
 
 }
 
-@mixin button($shadow:null) {
+@mixin button($shadow: null, $color: null, $bg: $white) {
   @extend %label;
-  background: $white;
+  background: $bg;
 
   @if ($shadow) {
     box-shadow: $shadow;
     transition: $transition;
   }
+
+  @if ($color) {
+    color: $color;
+
+    &:hover,
+    &:focus {
+      color: darken($color, 10);
+    }
+  }
+
 }

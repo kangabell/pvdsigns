@@ -159,13 +159,7 @@ img {
   padding-bottom: $gutter * 2;
 
   a {
-    color: $darkgray;
-
-    &:hover,
-    &:focus {
-      color: $black;
-    }
-
+    @include button($color: $darkgray, $bg: transparent);
   }
 
 } // .site-footer
