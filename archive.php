@@ -7,7 +7,11 @@ if (have_posts()) :
 	while (have_posts()) : the_post();
 		get_template_part('partials/tile');
 	endwhile;
-	the_posts_navigation();
+?>
+	<div class="pagination">
+		<?php posts_nav_link(' ','&#8592; Older Posts', 'Newer Posts &#8594;'); ?>
+	</div>
+<?php
 else :
 	echo 'Sorry, no posts found.';
 endif;

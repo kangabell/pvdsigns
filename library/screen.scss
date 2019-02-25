@@ -22,7 +22,7 @@ $fontsmall: 0.85rem;
   display: flex;
   flex-wrap: wrap;
   height: 100%;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 %wrap {
@@ -84,11 +84,15 @@ a {
 
 }
 
+%button {
+  @extend %label;
+  background: $white;
+}
+
 .button,
 button,
 input[type='submit'] {
-  @extend %label;
-  background: $white;
+  @extend %button;
 }
 
 input[type='submit'] {
@@ -425,6 +429,17 @@ figcaption {
 
 }
 
-.posts-navigation {
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  padding-top: $gutter;
+  padding-bottom: $gutter;
   width: 100%;
+
+  a {
+    @extend %button;
+    box-shadow: 1px 1px 8px rgba($black, 0.2);
+    transition: all 0.125s;
+  }
+
 }
