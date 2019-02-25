@@ -14,6 +14,8 @@ $black: #000;
 $blue: #2184B8;
 
 $border: 1px solid rgba($black, 0.2);
+$shadow: 1px 1px 8px rgba($black, 0.2);
+$transition: all 0.125s;
 
 $fontsmall: 0.85rem;
 
@@ -84,15 +86,23 @@ a {
 
 }
 
-%button {
+@mixin button($shadow:null) {
   @extend %label;
   background: $white;
+
+  @if ($shadow) {
+    box-shadow: $shadow;
+    transition: $transition;
+  }
 }
 
-.button,
 button,
+.button {
+  @include button($shadow);
+}
+
 input[type='submit'] {
-  @extend %button;
+  @include button;
 }
 
 input[type='submit'] {
@@ -101,12 +111,12 @@ input[type='submit'] {
 
 a img,
 .button {
-  box-shadow: 1px 1px 8px rgba($black, 0.2);
-  transition: all 0.125s;
 }
 
 a img {
   border: $border;
+  box-shadow: $shadow;
+  transition: $transition;
 
   &:hover,
   &:focus {
@@ -437,9 +447,7 @@ figcaption {
   width: 100%;
 
   a {
-    @extend %button;
-    box-shadow: 1px 1px 8px rgba($black, 0.2);
-    transition: all 0.125s;
+    @include button($shadow);
   }
 
 }
