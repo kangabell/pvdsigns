@@ -98,10 +98,6 @@ img {
   margin-bottom: $gutter * 2;
 }
 
-.page-title {
-  width: 100%;
-}
-
 
 /* HEADER ***/
 
@@ -356,19 +352,19 @@ figcaption {
 .archive,
 .search-results {
 
-  main .wrap {
-    @extend %flexy;
-  }
-
   .thumbnail {
     margin-bottom: $gutter;
-    width: calc(33% - #{$gutter / 2});
+    width: calc(50% - #{$gutter / 2});
+    @media only screen and (min-width: 30rem) {
+      width: calc(33% - #{$gutter / 2});
+    }
   }
 
 }
 
 .pagination {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   padding-top: $gutter;
   padding-bottom: $gutter;
@@ -376,6 +372,11 @@ figcaption {
 
   a {
     @include button($shadow);
+    margin-bottom: $gutter / 2;
+  }
+
+  @media only screen and (min-width: 30rem) {
+    flex-direction: row;
   }
 
 }
