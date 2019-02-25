@@ -51,7 +51,8 @@ $menu2_object = wp_get_nav_menu_object( $menu2_id );
 		<?php
 		$args = array(
 			'posts_per_page' => 12,
-			'orderby' => 'modified'
+			'orderby' => 'modified',
+			'post__not_in' => $featured_ids
 		);
 		query_posts ($args);
 		if (have_posts()) : while (have_posts()) : the_post();
