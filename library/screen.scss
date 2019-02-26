@@ -160,6 +160,25 @@ img {
 
   a {
     @include button($color: $darkgray, $bg: transparent);
+    display: table;
+  }
+
+  .footer-widget {
+    margin-bottom: $gutter;
+  }
+
+  @media only screen and (min-width: 30rem) {
+
+    .wrap {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .footer-widget {
+      width: calc(50% - #{$gutter});
+    }
+
   }
 
 } // .site-footer
