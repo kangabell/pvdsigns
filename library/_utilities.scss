@@ -26,8 +26,13 @@ $fontsmall: 0.85rem;
 %wrap {
   max-width: 1300px;
   margin: 0 auto;
-  padding: $gutter;
+  padding: $gutter / 2;
   width: 100%;
+
+  @media only screen and (min-width: 60rem) {
+    padding: $gutter;
+  }
+
 }
 
 .screen-reader-text {

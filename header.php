@@ -9,9 +9,10 @@
 <body <?php body_class(); ?>>
 	<header class="site-header">
 		<div class="wrap">
-			<div class="logo">
-				<h1><a href="<?php echo get_home_url(); ?>"><?php bloginfo(); ?></a></h1>
-			</div>
+			<a class="logo" href="<?php echo get_home_url(); ?>">
+				<h1><?php bloginfo(); ?></h1>
+				<p><?php bloginfo( 'description' ); ?></p>
+			</a>
 			<?php echo get_search_form(); ?>
 		</div>
 	</header>
