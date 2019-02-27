@@ -68,6 +68,10 @@ ul {
   padding-left: 1em;
 }
 
+li {
+  margin-bottom: 0.5em;
+}
+
 .wrap {
   @extend %wrap;
 }
@@ -139,7 +143,7 @@ img {
     text-transform: uppercase;
 
     @media only screen and (min-width: 60rem) {
-      font-size: 4.2rem;
+      font-size: 3.875rem;
     }
 
   }
@@ -154,23 +158,6 @@ img {
 
     @media only screen and (min-width: 60rem) {
       font-size: $fontsmall;
-
-      &::before,
-      &::after {
-        color: $gray;
-        content: $star;
-        font-size: 0.65em;
-        font-style: normal;
-        vertical-align: 0.15em;
-      }
-
-      &::before {
-        padding-right: 0.5em;
-      }
-
-      &::after {
-        padding-left: 0.5em;
-      }
     }
 
   } // .logo p
@@ -340,30 +327,22 @@ img {
   grid-area: bottom;
 
   ul {
-    list-style: none;
-    padding-left: 0;
-  }
-
-  li {
-    display: inline;
-    margin-right: 0.25em;
-
-    + li:before {
-      color: $gray;
-      content: '\2022';
-      padding-right: 0.5em;
-    }
-
+    @extend %inline-list;
   }
 
 } // .menu-2
 
 .show-all {
-  grid-area: column;
+  grid-area: bottom;
   place-self: end stretch;
 
   .button {
     display: block;
+  }
+
+  @media only screen and (min-width: 30rem) {
+    grid-area: column;
+    transform: translateY(100%);
   }
 
 }
