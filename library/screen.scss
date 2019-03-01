@@ -94,7 +94,7 @@ img {
 }
 
 .flex {
-  @extend %flexy;
+  @include flexy;;
   justify-content: space-between;
 }
 
@@ -384,6 +384,39 @@ figcaption {
   }
 
 }
+
+.tags {
+  font-size: $fontsmall;
+}
+
+// Layout
+.single {
+
+  .page-header {
+    border-bottom: $gutter solid $white;
+    padding-bottom: $gutter;
+  }
+
+  @media only screen and (min-width: 60rem) {
+    .wrap {
+      @include flexy;
+    }
+
+    .page-header {
+      border-bottom: 0; // override
+      border-left: $gutter solid $white;
+      order: 1;
+      padding-left: $gutter * 2;
+      width: calc(30% - #{$gutter});
+    }
+
+    .page-content {
+      order: 0;
+      width: calc(70% - #{$gutter});
+    }
+  }
+
+} // .single
 
 
 /* ARCHIVES ***/

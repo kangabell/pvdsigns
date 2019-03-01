@@ -17,7 +17,7 @@ $fontsmall: 0.85rem;
 
 $star: '\2605';
 
-%flexy {
+@mixin flexy() {
   align-content: space-between;
   display: flex;
   flex-wrap: wrap;

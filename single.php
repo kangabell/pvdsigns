@@ -14,14 +14,20 @@
 				the_date();
 				?>
 			</p>
+			<p class="tags">
+				<?php
+				the_tags('', ' / ');
+				?>
+			</p>
 		<?php
 		endif;
 		?>
 	</div>
-	<?php
-	the_content();
-	the_tags('<p>', ' / ', '</p>');
-	?>
+	<div class="page-content">
+		<?php
+		the_content();
+		?>
+	</div>
 
 <?php endwhile; endif; ?>
 		  
