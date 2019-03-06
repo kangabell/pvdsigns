@@ -213,6 +213,26 @@ img {
 
 } // .site-footer
 
+/* GRID LAYOUT PAGES */
+
+.home,
+.single {
+
+  main .wrap {
+    display: grid;
+    grid-column-gap: $gutter;
+    grid-row-gap: $gutter;
+    grid-template-columns: 100%;
+
+    @media only screen and (min-width: 30rem) {
+      grid-column-gap: $gutter * 2;
+      grid-row-gap: $gutter * 2;
+    }
+
+  }
+
+} // .home, .single
+
 
 /* HOMEPAGE ***/
 
@@ -223,11 +243,7 @@ img {
   }
 
   main .wrap {
-    display: grid;
-    grid-column-gap: $gutter;
-    grid-row-gap: $gutter;
     grid-auto-rows: 5rem;
-    grid-template-columns: 100%;
     grid-template-areas:
       "main-top"
       "main-top"
@@ -245,8 +261,6 @@ img {
       "bottom";
 
     @media only screen and (min-width: 30rem) {
-      grid-column-gap: $gutter * 2;
-      grid-row-gap: $gutter * 2;
       grid-template-columns: minmax(50%, 38rem) 1fr;
       grid-template-areas:
         "main-top column"
@@ -390,29 +404,43 @@ figcaption {
 }
 
 // Layout
+.single main .wrap {
+  grid-template-areas:
+    "sidebar"
+    "main"
+    "extra";
+
+  @media only screen and (min-width: 60rem) {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "main main sidebar"
+      "main main extra";
+  }
+} // .single main .wrap
+
 .single {
+
+  .page-content {
+    grid-area: main;
+  }
 
   .page-header {
     border-bottom: $gutter solid $white;
+    grid-area: sidebar;
     padding-bottom: $gutter;
-  }
 
-  @media only screen and (min-width: 60rem) {
-    .wrap {
-      @include flexy;
-    }
-
-    .page-header {
+    @media only screen and (min-width: 60rem) {
       border-bottom: 0; // override
       border-left: $gutter solid $white;
-      order: 1;
       padding-left: $gutter * 2;
-      width: calc(30% - #{$gutter});
     }
+  }
 
-    .page-content {
-      order: 0;
-      width: calc(70% - #{$gutter});
+  .related-items {
+    grid-area: extra;
+
+    .thumbnail {
+      display: block;
     }
   }
 

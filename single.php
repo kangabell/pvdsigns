@@ -1,5 +1,9 @@
 <?php get_header(); ?>
 
+<?php
+$related_items = get_field('related_items');
+?>
+
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 	<div class="page-header">
@@ -28,6 +32,22 @@
 		the_content();
 		?>
 	</div>
+	<?php
+	if( $related_items ):
+	?>
+		<div class="related-items">
+			<h2><?php _e('Related', 'pvdsigns'); ?></h2>
+		<?php
+		foreach( $related_items as $post ):
+			setup_postdata($post);
+			get_template_part('partials/tile');
+	    endforeach;
+	    wp_reset_postdata();
+	    ?>
+    	</div>
+    <?php
+	endif;
+	?>
 
 <?php endwhile; endif; ?>
 		  
