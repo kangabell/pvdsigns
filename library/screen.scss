@@ -99,7 +99,12 @@ img {
 }
 
 .page-header {
-  margin-bottom: $gutter * 2;
+  margin-bottom: $gutter;
+
+  @media only screen and (min-width: 60rem) {
+    margin-bottom: $gutter * 2;
+  }
+
 }
 
 
@@ -411,10 +416,10 @@ figcaption {
     "extra";
 
   @media only screen and (min-width: 60rem) {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 20rem;
     grid-template-areas:
-      "main main sidebar"
-      "main main extra";
+      "main sidebar"
+      "main extra";
   }
 } // .single main .wrap
 
@@ -422,26 +427,36 @@ figcaption {
 
   .page-content {
     grid-area: main;
+    @media only screen and (min-width: 60rem) {
+      border-right: $gutter solid $white;
+      padding-right: $gutter * 2;
+    }
   }
 
   .page-header {
     border-bottom: $gutter solid $white;
     grid-area: sidebar;
     padding-bottom: $gutter;
-
     @media only screen and (min-width: 60rem) {
       border-bottom: 0; // override
-      border-left: $gutter solid $white;
-      padding-left: $gutter * 2;
     }
   }
 
   .related-items {
+    align-self: end;
     grid-area: extra;
+    margin-bottom: $gutter / 2;
 
-    .thumbnail {
-      display: block;
+    h2 {
+      @extend %heading-alt;
+      font-size: 1.125rem;
     }
+
+  } // .single .releated-items
+
+  .thumbnail {
+    display: block;
+    width: calc(50% - #{$gutter / 2});
   }
 
 } // .single

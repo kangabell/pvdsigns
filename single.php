@@ -36,16 +36,18 @@ $related_items = get_field('related_items');
 	if( $related_items ):
 	?>
 		<div class="related-items">
-			<h2><?php _e('Related', 'pvdsigns'); ?></h2>
-		<?php
-		foreach( $related_items as $post ):
-			setup_postdata($post);
-			get_template_part('partials/tile');
-	    endforeach;
-	    wp_reset_postdata();
-	    ?>
-    	</div>
-    <?php
+			<h2><?php _e('Related Signs', 'pvdsigns'); ?></h2>
+			<div class="flex">
+			<?php
+			foreach( $related_items as $post ):
+				setup_postdata($post);
+				get_template_part('partials/tile');
+			endforeach;
+			wp_reset_postdata();
+			?>
+			</div>
+		</div>
+	<?php
 	endif;
 	?>
 

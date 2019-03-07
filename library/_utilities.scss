@@ -109,6 +109,14 @@ $star: '\2605';
 
 }
 
+%heading-alt {
+  font-family: $sans-serif;
+  font-weight: normal;
+  letter-spacing: 0.025em;
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+}
+
 @mixin button($shadow: null, $color: null, $bg: $white) {
   @extend %label;
   background: $bg;
