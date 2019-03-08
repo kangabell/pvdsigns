@@ -176,6 +176,14 @@ if ( ! function_exists( 'pvdsigns_setup' ) ) :
 
 		add_filter('acf/update_value/name=related_items', 'pvdsigns_acf_bidirectional', 10, 3);
 
+		/**
+		 * Remove inline `width` attribute on `figure` elements added by WP
+		 *
+		 * @link https://stackoverflow.com/questions/23812072/wordpress-3-9-x-remove-inline-width-from-figure-element#answer-47662620
+		 */
+
+		add_filter('img_caption_shortcode_width', '__return_false');
+
 	}
 
 endif;
