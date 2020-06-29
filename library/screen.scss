@@ -131,24 +131,23 @@ img {
 } // .site-header
 
 .logo {
-  color: lighten($gray, 5);
+  color: darken($darkgray, 10);
   margin-bottom: 1rem;
-  text-align: center;
 
   &:hover,
   &:focus {
-    color: $darkgray;
+    color: $black;
   }
 
   h1 {
-    font-family: 'Autor Black', $sans-serif;
+    font-family: $serif;
     font-size: 3rem;
     line-height: 1em;
     margin: 0;
-    text-transform: uppercase;
 
     @media only screen and (min-width: 60rem) {
       font-size: 3.875rem;
+      text-align: left;
     }
 
   }
@@ -157,7 +156,6 @@ img {
     color: $darkgray;
     font-family: $serif;
     font-size: 0.675rem;
-    font-style: italic;
     font-weight: normal;
     margin: 0;
 
